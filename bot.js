@@ -36,10 +36,10 @@ const CONFIG = {
   PRIORITY_FEE: 0.0008,
 
   // Filtreler
-  MAX_DEV_HOLD_PCT: 8,
-  MIN_INITIAL_BUY_SOL: 0.5,
-  MAX_INITIAL_BUY_SOL: 5,
-  REQUIRE_SOCIALS: true,
+  MAX_DEV_HOLD_PCT: 15,
+  MIN_INITIAL_BUY_SOL: 0.1,
+  MAX_INITIAL_BUY_SOL: 10,
+  REQUIRE_SOCIALS: false,
 
   // Çıkış stratejisi
   TAKE_PROFIT_X: 2.0,
@@ -48,7 +48,7 @@ const CONFIG = {
   MAX_HOLD_SECONDS: 600,
 
   // Koruma limitleri
-  MAX_TRADES_PER_DAY: 10,
+  MAX_TRADES_PER_DAY: 30,
   MAX_DAILY_LOSS_SOL: 0.15,
 };
 // =====================================================
