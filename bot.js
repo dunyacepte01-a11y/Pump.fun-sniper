@@ -18,6 +18,15 @@
  */
 
 const WebSocket = require("ws");
+const http = require("http");
+
+// ---- RENDER ÜCRETSİZ PLAN İÇİN MİNİ WEB SUNUCUSU ----
+// Render'ın ücretsiz planı bir port dinleyen servis ister.
+// UptimeRobot bu adrese 5 dk'da bir istek atarak botu uyanık tutar.
+http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end(`Bot ayakta | mod: ${state?.dryRun ? "TEST" : "CANLI"} | acik pozisyon: ${state?.openPositions?.size ?? 0}`);
+}).listen(process.env.PORT || 3000, () => console.log("Saglik sunucusu hazir"));
 
 // ====================== AYARLAR ======================
 const CONFIG = {
